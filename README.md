@@ -94,3 +94,41 @@ Test user with minimal functionality to register, login, create booking, add boo
 - The rate limitation for login is tested by attempting multiple logins with incorrect credentials until the error page appears.
 - The session timeout is tested by leaving the session inactive for 1 minute; after that, the user cannot add a booking or view the dashboard. To continue, the user must log in again.
 
+---
+
+**Screenshots of System**
+
+- Home Page
+  ![image alt](image url)
+  
+- Account Registration Page
+  ![image alt](image url)
+  
+- Test User Login page with OTP verification
+  ![image alt](image url)
+  
+- Test User Dashboard
+  ![image alt](image url)
+  
+- Create Booking page
+  ![image alt](image url)
+  
+- Booking List page
+  ![image alt](image url)
+  
+- Admin verification page (RBAC verified)
+  ![image alt](image url)
+   
+- Admin Login page
+  ![image alt](image url)
+  
+- Admin Dashboard page
+  ![image alt](image url)
+  
+- Admin Privilege page (add user, edit user functionality or delete user)
+  ![image alt](image url) 
+
+
+
+
+
