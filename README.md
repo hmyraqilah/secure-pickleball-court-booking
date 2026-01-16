@@ -114,7 +114,7 @@ Test user with minimal functionality to register, login, create booking, add boo
   
 - Test User Dashboard
   
-  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/3529dd5b33d6dfaf077347bc4f9fadaa22c9ec68/test%20user%20dashboard.pn)
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/469e1907b08564f76267f89aae4d1c807fc0fe30/test%20user%20dashboard.png) 
   
 - Create Booking page
   
