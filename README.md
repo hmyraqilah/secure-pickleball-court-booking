@@ -78,10 +78,14 @@ Test user with minimal functionality to register, login, create booking, add boo
 - Output Encoding: Django templates escape output to prevent XSS.
 - HTTPS: Considered at design level; development server uses HTTP.
 
+
 ---
 **IMPORTANT NOTES**
 - Do NOT share the venv folder.
 - db.sqlite3 is included (do not delete).
 - Each member must create their own virtual environment.
 - Do NOT run migrations unless the database is missing.
+- After login process, second authentication which is the OTP code will appear in the terminal while the development server is running.
+- The rate limitation for login is tested by attempting multiple logins with incorrect credentials until the error page appears.
+- The session timeout is tested by leaving the session inactive for 1 minute; after that, the user cannot add a booking or view the dashboard. To continue, the user must log in again.
 
