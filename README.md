@@ -99,7 +99,7 @@ Test user with minimal functionality to register, login, create booking, add boo
 **Screenshots of System**
 
 - Home Page
-  ![image alt](image url)
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/5ccde8e2ff62b5c2fd6ccfaff19ac8cdfdc62e49/home%20page.png)
   
 - Account Registration Page
   ![image alt](image url)
