@@ -39,7 +39,8 @@ Download from: [https://www.python.org/downloads/](https://www.python.org/downlo
 ### 2. Create a Virtual Environment
 **Windows :**
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate or myenv\Scripts\activate.bat
+
 
 **macOS / Linux :** 
 python3 -m venv venv
