@@ -65,7 +65,7 @@ Admins manage users, groups, courts, and bookings through Django Admin: /admin/
 Test user with minimal functionality to register, login, create booking, add booking, view booking list and edit or delete booking. 
 
 - Username: mai
-- Password: mai12345678
+- Password: 12345678
 
 ---
 **Important Security Notes**
@@ -84,4 +84,4 @@ Test user with minimal functionality to register, login, create booking, add boo
 - db.sqlite3 is included (do not delete).
 - Each member must create their own virtual environment.
 - Do NOT run migrations unless the database is missing.
-- Since we are following the OWASP Top 10 and ASVS guidelines, the user needs to attempt several logins first before accessing the test user page. After receiving the error message, the user can return to the login page and enter either the test user or admin credentials. This process tests the rate limitation for login. Upon logging in again, the user will receive an OTP verification message in the terminal. After verification, the user can view the dashboard and book a court.
+
