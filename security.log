@@ -1,0 +1,31 @@
+[WARNING] 2026-01-14 02:09:29,979 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 02:09:53,349 - Suspicious activity: invalid OTP attempt for user mai from IP 127.0.0.1
+[WARNING] 2026-01-14 03:12:23,493 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 03:12:42,407 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 03:15:46,974 - Failed login attempt for username: sha12345678sha from IP 127.0.0.1
+[WARNING] 2026-01-14 03:16:09,136 - Suspicious activity: invalid OTP attempt for user sha from IP 127.0.0.1
+[WARNING] 2026-01-14 03:16:17,407 - Suspicious activity: invalid OTP attempt for user sha from IP 127.0.0.1
+[WARNING] 2026-01-14 03:16:35,716 - Suspicious activity: invalid OTP attempt for user sha from IP 127.0.0.1
+[WARNING] 2026-01-14 03:16:57,371 - Suspicious activity: invalid OTP attempt for user sha from IP 127.0.0.1
+[WARNING] 2026-01-14 03:17:20,568 - Suspicious activity: invalid OTP attempt for user sha from IP 127.0.0.1
+[INFO] 2026-01-14 03:44:18,193 - Admin action: CREATED booking by wawa
+[WARNING] 2026-01-14 04:11:30,886 - Failed login attempt for username: sha from IP 127.0.0.1
+[INFO] 2026-01-14 14:48:24,602 - Admin action: CREATED booking by wawa
+[WARNING] 2026-01-14 14:49:58,834 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 14:59:05,828 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 14:59:20,019 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 14:59:37,012 - Failed login attempt for username: mai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:00:04,389 - Failed login attempt for username: iman from IP 127.0.0.1
+[WARNING] 2026-01-14 15:05:37,388 - Failed login attempt for username: misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:05:53,894 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:06:06,123 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:06:36,264 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:06:54,446 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:07:03,073 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:07:23,704 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:16:31,503 - Failed login attempt for username: misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:16:36,527 - Failed login attempt for username: misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:17:01,938 - Failed login attempt for username: misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:17:56,466 - Failed login attempt for username: misai from IP 127.0.0.1
+[WARNING] 2026-01-14 15:18:16,888 - Suspicious activity: invalid OTP attempt for user misai from IP 127.0.0.1
+[WARNING] 2026-01-16 23:30:15,118 - Failed login attempt for username: wawa from IP 127.0.0.1

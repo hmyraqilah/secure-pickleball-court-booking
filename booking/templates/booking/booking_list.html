@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pickleball Court Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-top: 15px;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a.button:hover {
+            background-color: #27ae60;
+        }
+
+        .empty-message {
+            color: #555;
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pickleball Court Booking</h1>
+        <h2>Your Bookings:</h2>
+
+        <a href="{% url 'booking_create' %}" class="button">Add Booking</a>
+
+        {% if bookings %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Court Number</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.court_number }}</td>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td>
+                        <a href="{% url 'booking_update' booking.id %}">Edit</a> |
+                        <a href="{% url 'booking_delete' booking.id %}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="empty-message">You have no bookings yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

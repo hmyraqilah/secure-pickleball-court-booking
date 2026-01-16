@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pickle Power Ampang !🏓</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .hero {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .court-info, .notes {
+            margin-top: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        a.button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Pickle Power Ampang ! 🏓</h1>
+        <p>Looking for a fun, fast-paced sport to stay active? Our Pickleball Court in Ampang is perfect for players of all ages and skill levels! Whether you’re a beginner or a seasoned player, come and enjoy an exciting game anytime.</p>
+    </div>
+
+    <div class="container">
+        <div class="court-info">
+            <h2>Court Details:</h2>
+            <p><strong>Location:</strong> Pickle Power Club @ Ampang, Lot 1153, Jalan, Jln Lingkaran Tengah 2, 68000 Ampang, Selangor</p>
+            <p><strong>Open:</strong> 24 hours, daily</p>
+            <p><strong>Rate:</strong> RM50 per hour</p>
+        </div>
+
+        <div class="notes">
+            <h2>Important Notes:</h2>
+            <p>The court is open to everyone, bring your friends, family, or join a new group!</p>
+            <p>Please manage your own personal belongings. We are not responsible for any personal belongings left behind.</p>
+
+        <div class="ready">
+            <h2>Ready to play?</h2>
+            <p>Register now. Book your court and get in the game!</p>
+        </div>
+
+        <div class="buttons">
+            <a href="{% url 'register' %}" class="button">Register</a>
+            <a href="{% url 'login' %}" class="button">Login</a>
+            <a href="{% url 'booking_list' %}" class="button">Book a Court</a>
+            <a href="{% url 'dashboard' %}" class="button">Dashboard</a>
+           
+
+            <a href="/admin/" class="button">Admin</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pickleball Court Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+
+        .errorlist {
+            color: red;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pickleball Court Booking</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="id_court_number">Court Number</label>
+            {{ form.court_number }}
+
+            <label for="id_date">Date</label>
+            {{ form.date }}
+
+            <label for="id_time">Time</label>
+            {{ form.time }}
+
+            <button type="submit">Save Booking</button>
+        </form>
+
+        <a href="{% url 'booking_list' %}" class="back-link">&larr; Back to bookings</a>
+    </div>
+</body>
+</html>
