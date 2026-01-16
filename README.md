@@ -4,11 +4,15 @@ This is a **Django-based web application** developed for the **Secure Software D
 
 ---
 
-## Technology Used
-- **Python 3.9+**  
-- **Django 5.x**  
-- **SQLite3** (default database)  
-- **Bootstrap 5** (for basic UI styling)
+## Technology Used:
+- Backend: Python 3.11 / Django 5.2.x
+- Frontend: HTML, CSS, JavaScript
+- Database: SQLite3 (default database)
+- UI Styling: Bootstrap 5 (for basic UI)
+  
+**Packages / Libraries:**
+- django-ratelimit (login rate limiting)
+- python-dotenv (environment variables)
 
 ---
 
