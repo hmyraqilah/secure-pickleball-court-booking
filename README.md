@@ -70,7 +70,7 @@ Admins manage users, groups, courts, and bookings through Django Admin: /admin/
 Test user with minimal functionality to register, login, create booking, add booking, view booking list and edit or delete booking. 
 
 - Username: mai
-- Password: 12345678
+- Password: mai12345678
 
 ---
 **Important Security Notes**
