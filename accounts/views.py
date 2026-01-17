@@ -55,16 +55,19 @@ def login_view(request):
 
             # Store user ID temporarily
             request.session['otp_user_id'] = user.id
-        else:
-            #LOG FAILED LOGIN
-            username = request.POST.get("username")
-            logger.warning(
-                f"Failed login attempt for username: {username} from IP {request.META.get('REMOTE_ADDR')}"
-            )
-            return redirect('otp_verify')
-    else:
-        form = AuthenticationForm()
 
+            # ✅ Redirect to OTP page after successful username/password
+            return redirect('otp_verify')
+
+        # ❌ Login failed: log attempt and re-render login page with errors
+        username = request.POST.get("username")
+        logger.warning(
+            f"Failed login attempt for username: {username} from IP {request.META.get('REMOTE_ADDR')}"
+        )
+        return render(request, 'accounts/login.html', {'form': form})
+
+    # GET request
+    form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})
 
 
@@ -79,34 +82,39 @@ def otp_verify_view(request):
     except User.DoesNotExist:
         return redirect('login')
 
+    error = None
+
     if request.method == "POST":
         entered_otp = request.POST.get("otp")
-        
+
         # Get latest OTP in the last 5 minutes
         valid_time = timezone.now() - timedelta(minutes=5)
-        otp_obj = LoginOTP.objects.filter(user=user, created_at__gte=valid_time).order_by('-created_at').first()
+        otp_obj = LoginOTP.objects.filter(
+            user=user,
+            created_at__gte=valid_time
+        ).order_by('-created_at').first()
 
         if otp_obj and otp_obj.otp == entered_otp:
             login(request, user)
             otp_obj.delete()  # OTP used once
-            del request.session['otp_user_id']
+            request.session.pop('otp_user_id', None)
             return redirect('dashboard')
-        #LOG OTP FAIL
-        else:
-         logger.warning(
-             f"Suspicious activity: invalid OTP attempt for user {user.username} from IP {request.META.get('REMOTE_ADDR')}"
-    )
-    error = "Invalid or expired OTP."
+
+        # OTP failed
+        logger.warning(
+            f"Suspicious activity: invalid OTP attempt for user {user.username} from IP {request.META.get('REMOTE_ADDR')}"
+        )
+        error = "Invalid or expired OTP."
+
     return render(request, 'accounts/otp_verify.html', {'error': error})
-
-
-    return render(request, 'accounts/otp_verify.html')
 
 
 # 4. DASHBOARD (LOGIN REQUIRED)
 @login_required
 def dashboard_view(request):
-    if not request.user.is_authenticated:#LOG SUSPICIOUS ACTIVITY
+    # This check is redundant because @login_required already blocks,
+    # but keeping your logging behavior without changing intent.
+    if not request.user.is_authenticated:  # LOG SUSPICIOUS ACTIVITY
         logger.warning(
             f"Suspicious activity: unauthorized dashboard access from IP {request.META.get('REMOTE_ADDR')}"
         )
@@ -114,15 +122,13 @@ def dashboard_view(request):
 
 
 # ===== TEST ERROR HANDLING =====
-from django.core.exceptions import PermissionDenied
+from django.core.exceptions import PermissionDenied, BadRequest
 
 def test403(request):
     raise PermissionDenied
 
 def test500(request):
     1/0   # sengaja buat error
-
-from django.core.exceptions import BadRequest
 
 def test400(request):
     raise BadRequest
