@@ -4,11 +4,15 @@ This is a **Django-based web application** developed for the **Secure Software D
 
 ---
 
-## Technology Used
-- **Python 3.9+**  
-- **Django 5.x**  
-- **SQLite3** (default database)  
-- **Bootstrap 5** (for basic UI styling)
+## Technology Used:
+- Backend: Python 3.11 / Django 5.2.x
+- Frontend: HTML, CSS, JavaScript
+- Database: SQLite3 (default database)
+- UI Styling: Bootstrap 5 (for basic UI)
+  
+**Packages / Libraries:**
+- django-ratelimit (login rate limiting)
+- python-dotenv (environment variables)
 
 ---
 
@@ -89,4 +93,54 @@ Test user with minimal functionality to register, login, create booking, add boo
 - After login process, second authentication which is the OTP code will appear in the terminal while the development server is running.
 - The rate limitation for login is tested by attempting multiple logins with incorrect credentials until the error page appears.
 - The session timeout is tested by leaving the session inactive for 1 minute; after that, the user cannot add a booking or view the dashboard. To continue, the user must log in again.
+
+---
+
+**Screenshots of System**
+
+- Home Page
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/5ccde8e2ff62b5c2fd6ccfaff19ac8cdfdc62e49/home%20page.png)
+  
+- Account Registration Page
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/3529dd5b33d6dfaf077347bc4f9fadaa22c9ec68/account%20registration%20page.png)
+  
+- Test User Login page with OTP verification
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/3529dd5b33d6dfaf077347bc4f9fadaa22c9ec68/login%20page.png)
+  
+   ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/34376051e51d5b9368dcf50e95b7dbf28c0995ee/OTP%20verification%20page.png)
+  
+- Test User Dashboard
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/469e1907b08564f76267f89aae4d1c807fc0fe30/test%20user%20dashboard.png) 
+  
+- Create Booking page
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/3529dd5b33d6dfaf077347bc4f9fadaa22c9ec68/create%20booking%20page.png)
+  
+- Booking List page
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/3529dd5b33d6dfaf077347bc4f9fadaa22c9ec68/booking%20list%20page.png)
+  
+- Admin verification page (RBAC verified)
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/34376051e51d5b9368dcf50e95b7dbf28c0995ee/admin%20verification%20page.png)
+   
+- Admin Login page
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/34376051e51d5b9368dcf50e95b7dbf28c0995ee/admin%20login%20page.png)
+  
+- Admin Dashboard page
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/34376051e51d5b9368dcf50e95b7dbf28c0995ee/admin%20dashboard%20page.png)
+  
+- Admin Privilege page (add user, edit user functionality or delete user)
+  
+  ![image alt](https://github.com/hmyraqilah/secure-pickleball-court-booking/blob/34376051e51d5b9368dcf50e95b7dbf28c0995ee/admin%20privilege.png) 
+
+
+
+
 
