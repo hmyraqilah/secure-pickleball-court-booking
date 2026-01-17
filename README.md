@@ -64,7 +64,7 @@ Open your browser at: http://127.0.0.1:8000/
 Admins manage users, groups, courts, and bookings through Django Admin: /admin/
 
 - Username: wawa
-- Password: WAWA12345678
+- Password: wawa12345678
 
 **Test User**
 Test user with minimal functionality to register, login, create booking, add booking, view booking list and edit or delete booking. 
