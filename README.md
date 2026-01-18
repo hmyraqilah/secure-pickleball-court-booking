@@ -26,11 +26,24 @@ secure-pickleball-court-booking/
 ├── secure_booking/    
 ├── staticfiles/admin/  
 ├── templates/         
-├── db.sqlite3         
+├── .DS_Store         
+├── .env         
+├── OTP verfication page.png               
+├── account registration page.png       
+├── admin dashboard page.png  
+├── admin login page.png     
+├── admin privilege page.png           
+├── admin verification page.png         
+├── booking list page.png                
+├── create booking page.png             
+├── db.sqlite3                 
+├── home page.png            
+├── login page.png                         
 ├── manage.py          
-├── .env               
-├── security.log       
-└── README.md          
+├── requirements.txt              
+├── security.log             
+├── test user dashboard.png               
+└── README.md  
 
 ---
 
